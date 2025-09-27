@@ -1,10 +1,7 @@
-name: CI/CD for Portfolio Website
+name: Deploy Portfolio
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
@@ -16,31 +13,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      # 2. Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "npm"
 
+      # 3. Install dependencies
       - name: Install Dependencies
         run: npm install
 
+      # 4. Build the Vite project
       - name: Build Project
         run: npm run build
         env:
-          CI: false 
+          CI: false
 
+      # 5. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main' 
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.KEY }}
-          publish_dir: ./build
-          cname: ${{ secrets.CNAME }} 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist      # Vite outputs production files to dist/
           enable_jekyll: false
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_message: "Deploy to GitHub Pages"
+          commit_message: "Deploy Vite Portfolio to GitHub Pages"
