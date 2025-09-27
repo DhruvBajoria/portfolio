@@ -29,7 +29,7 @@ export const projects = [
     title: "Pixel Verse",
     description:
       "A dynamic and interactive website delivering immersive gaming experiences. Built with React.js, GSAP, and Tailwind CSS, featuring scroll-triggered animations, 3D hover effects, and smooth geometric transitions to create a visually captivating UI. Deployed with Vite for lightning-fast builds, optimizing performance and user experience.",
-    image: "/projects-thumbnail/Pixel-Verse-Thumbnail.png",
+    image: "/projects-thumbnail/Pixel-Verse-ThumbNail.png",
     technologies: [
       {
         name: "React.js",
