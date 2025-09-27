@@ -144,13 +144,13 @@ const Navbar = () => {
             >
               Projects
             </MobileNavLink>
-            <MobileNavLink
+            {/* <MobileNavLink
               to="/achievements"
               isActive={location.pathname === "/achievements"}
               onClick={() => handleMenuClose()}
             >
               Achievements
-            </MobileNavLink>
+            </MobileNavLink> */}
             <MobileNavLink
               to="/contact"
               isActive={location.pathname === "/contact"}

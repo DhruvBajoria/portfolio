@@ -6,7 +6,7 @@ This is my personal portfolio showcasing my projects, experience, and achievemen
 
 You can check out my portfolio live at the following link:
 
-
+[https://dhruvbajoria.github.io/portfolio](https://dhruvbajoria.github.io/portfolio)
 
 ## Features
 
@@ -20,4 +20,6 @@ You can check out my portfolio live at the following link:
 To run this project locally, follow these steps:
 
 1. Clone the repository:
+```bash
+  git clone https://github.com/DhruvBajoria/portfolio.git
 

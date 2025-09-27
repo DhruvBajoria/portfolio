@@ -64,8 +64,8 @@ export const projects = [
         icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
       },
     ],
-    liveLink: "https://",
-    githubLink: "https://github.com/",
+    liveLink: "https://dhruvbajoria.github.io/portfolio/",
+    githubLink: "https://github.com/DhruvBajoria/portfolio",
   },
 
   {
